@@ -1,0 +1,26 @@
+# Entornos virtuales
+env/
+venv/
+.venv/
+*_env/
+
+# Cache de Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.pytest_cache/
+.ipynb_checkpoints/
+
+# Configuraciones de IDEs y del sistema
+.vscode/
+.idea/
+.DS_Store
+.antigravitycli/
+.npm-cache/
+
+# Archivos de datos de gran tamaño (descomentar si se decide no subirlos al repositorio remoto)
+# datasets/
+
+npm_cache/
+
