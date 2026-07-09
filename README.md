@@ -1,12 +1,13 @@
 # Análisis Integral de la Dinámica Monetaria y Cambiaria de la República Argentina
 ## Un Estudio Intertemporal del Impacto de las Políticas de Estabilización y la Deuda (2016-2017 vs. 2024-2025)
 
-Este repositorio contiene el desarrollo del cuaderno de Jupyter consolidado para el Proyecto Integrador de la pre-entrega de Machine Learning. El estudio analiza y compara empíricamente el comportamiento macrofinanciero de la economía argentina bajo dos esquemas de política monetaria y cambiaria diferenciados de la última década.
+Este repositorio contiene el desarrollo del Proyecto Integrador de Machine Learning. El estudio analiza y compara empíricamente el comportamiento macrofinanciero de la economía argentina bajo dos esquemas de política monetaria y cambiaria diferenciados de la última década, y sobre ese análisis entrena y evalúa modelos de aprendizaje automático.
 
 ## Estructura del Proyecto
 
-*   `proyecto_integrador_preentrega.ipynb`: Cuaderno principal de Jupyter que consolida la carga de datos, el procesamiento, feature engineering, visualizaciones (EDA) y la preparación de sets de entrenamiento y evaluación.
-*   `datasets/`: Directorio que contiene las series de tiempo del BCRA, CNV y BYMA empleadas en el análisis.
+*   `proyecto_integrador_final.ipynb`: **Cuaderno de la entrega final.** Continúa el trabajo de la pre-entrega y agrega las etapas de modelado: definición del problema, entrenamiento y comparación de modelos, evaluación con métricas, validación cruzada, interpretación de errores, conclusiones y anexo.
+*   `proyecto_integrador_preentrega.ipynb`: Cuaderno de la pre-entrega (carga de datos, procesamiento, feature engineering y EDA). Se conserva como referencia del avance previo.
+*   `datasets/`: Directorio con las series de tiempo del BCRA, CNV, BYMA y BLS-EEUU empleadas en el análisis.
 *   `.gitignore`: Exclusiones de archivos del entorno virtual y archivos temporales.
 
 ## Metodología y Enfoque Teórico
@@ -20,11 +21,18 @@ Se abordan variables clave como:
 *   **Tipo de Cambio Implícito en Obligaciones Negociables (ONs):** Reconstrucción del tipo de cambio corporativo libre frente a restricciones de cuenta de capital (cepo).
 *   **Monetización Real:** Evolución del ahorro real en pesos y dólares de los residentes.
 
+## Modelos de Machine Learning (Entrega Final)
+
+Sobre el dataset consolidado (30 observaciones mensuales, 15 por régimen) se plantean dos problemas complementarios que ponen a prueba la hipótesis central del estudio:
+
+*   **Regresión — Determinantes del ahorro real en pesos.** Se estima el saldo real de depósitos en pesos en función de las condiciones monetarias y cambiarias (tasa real, inflación, devaluación del TC implícito, actividad del mercado de ONs). Se comparan Regresión Lineal, Ridge y Random Forest, evaluados con MAE, RMSE y R², más validación cruzada K-Fold.
+*   **Clasificación — Detección del régimen de licuación.** Se clasifica cada mes según tenga tasa real negativa (licuación) o positiva, usando únicamente la huella de comportamiento de los ahorristas (dolarización, depósitos reales, presión cambiaria) y excluyendo deliberadamente la tasa y la inflación para evitar fuga de información. Se comparan Regresión Logística y Random Forest, evaluados con precisión, recall, F1 y matriz de confusión, más validación cruzada estratificada.
+
 ## Ejecución en Google Colab
 
 El cuaderno cuenta con un bloque de inicialización adaptativo. Si se ejecuta en entornos de nube como **Google Colab**, el script detectará el entorno y ofrecerá una interfaz interactiva de carga de archivos para subir los datasets en formato CSV desde su máquina local, organizándolos automáticamente en la estructura de directorios requerida.
 
 Para ejecutarlo en Colab:
 1.  Abra [Google Colab](https://colab.research.google.com).
-2.  Importe el archivo `proyecto_integrador_preentrega.ipynb`.
+2.  Importe el archivo `proyecto_integrador_final.ipynb`.
 3.  Ejecute las celdas secuencialmente. Cuando se le solicite en la sección 3.1, suba los archivos de datos de la carpeta `datasets/` del repositorio.

@@ -1,47 +1,65 @@
-# Consignas del Proyecto Integrador - Pre-Entrega
-**Curso**: Machine Learning - TalentoTech y Ministerio de Educación de Buenos Aires
+Proyecto final integrador
 
-## Objetivo
-Poner en práctica todo lo aprendido desarrollando nuestro propio proyecto de Machine Learning. La Pre-Entrega (a mitad del curso) no requiere la elección ni el entrenamiento de un modelo, sino dejar todo preparado para comenzar con el proceso de modelado en la segunda parte del curso.
+Consigna
 
-## Entregable
-Un cuaderno Jupyter (Google Colab o archivo `.ipynb` local) que incluya las secciones detalladas a continuación.
+Obligatorio
 
----
+Contexto y objetivo
 
-## Requerimientos
+A lo largo de este curso, exploramos de manera progresiva y aplicada las distintas etapas que forman parte del desarrollo de un modelo de aprendizaje automático. Desde la exploración y preparación de los datos hasta la implementación y evaluación de modelos, cada clase sentó las bases para comprender cómo transformar un conjunto de datos en una herramienta útil para la toma de decisiones.
 
-### 1. Selección del Dataset
-- Origen del dataset.
-- Breve descripción del problema que aborda.
-- Justificación de su elección.
-- *Nota*: Se recomienda utilizar datasets moderados en tamaño y complejidad, preferentemente tabulares.
+El Proyecto Integrador tiene como objetivo poner en práctica todo lo aprendido. A través de este trabajo, cada estudiante desarrollará su propio proyecto de Machine Learning, aplicando cada una de las etapas del proceso, desde la limpieza y codificación de los datos hasta la validación y análisis del rendimiento del modelo final.
 
-### 2. Análisis Exploratorio Inicial (EDA)
-- Distribución de variables.
-- Detección de valores faltantes.
-- Análisis de correlaciones.
-- Visualizaciones básicas (gráficos de distribución, boxplots, correlaciones, etc.).
+Consigna
 
-### 3. Limpieza de Datos
-- Tratamiento de valores nulos o faltantes.
-- Eliminación de registros duplicados.
-- Identificación y tratamiento de outliers (si corresponde).
+Obligatorio
 
-### 4. Transformaciones Básicas
-- Codificación de variables categóricas (One-Hot Encoding, Label Encoding, etc.).
-- Escalado de variables numéricas (StandardScaler, MinMaxScaler, etc.).
-- Creación o eliminación de variables (Feature Engineering básico), si fuera necesario.
+Entrega final
 
-### 5. Selección de Variables Relevantes
-- Determinar cuáles variables se utilizarán para alimentar al modelo según el análisis previo.
+La entrega final debe continuar el trabajo iniciado en la Pre-Entrega. Se espera que el estudiante retome ese notebook y complete las siguientes etapas:
 
-### 6. División del Dataset
-- Separar el dataset en conjuntos de entrenamiento (`train`) y prueba (`test`).
+Actividades:
 
----
+1- Elección del modelo o modelos a utilizar (al menos uno). Justificación según el tipo de problema (clasificación o regresión).​
 
-## Criterios de Evaluación y Estilo
-- Notebook organizado y bien comentado.
-- Código acompañado de explicaciones claras y observaciones propias en celdas de Markdown.
-- No se requiere presentación oral.
+2- Entrenamiento del modelo con el conjunto de entrenamiento.​
+
+3- Evaluación con métricas adecuadas, según el tipo de modelo (ej.: MAE, RMSE, R², precisión, recall, F1-score, matriz de confusión).​
+
+4- Aplicación de validación cruzada (cross-validation) para estimar el rendimiento del modelo de manera más robusta.
+
+Consigna
+
+Obligatorio
+
+Entrega final
+
+5 - Visualización de resultados e interpretación de errores o aciertos del modelo.
+
+6 - Conclusiones: reflexión sobre el modelo entrenado, posibilidades de mejora, y utilidad práctica del proyecto.​
+
+7 - Anexo final: incluir el link al dataset utilizado, referencias si se usaron fuentes externas, y aclaraciones que se consideren necesarias.
+
+Se espera que el notebook esté organizado, bien comentado, y que el código esté acompañado de explicaciones claras y observaciones propias. No se requiere presentación oral.
+
+Pautas de entrega y evaluación:
+
+Plazo de entrega: 7 días (clase 16)
+
+Formato: Una carpeta en Google Drive a la que se nombrará respetando el siguiente formato: Apellido y nombre del alumno - Comisión xxx - TPI Machine Learning que contenga, como mínimo:
+
+Los sets de datos originales.
+
+Un archivo de Google Colaboratory: contendrá diferentes bloques de texto y código, siguiendo los pasos y pautas enumerados en la consigna.
+
+Incluir al final un bloque de texto llamado “Anexo” con descripción y links a todos los archivos adicionales que haya incluido en la carpeta.
+
+Pautas de entrega y evaluación:
+
+Todos los archivos deben estar con permisos de lectura públicos, y de edición para el instructor responsable de evaluar.
+
+Se debe priorizar el uso de Google Colaboratory para todas las actividades.
+
+Entrega: La entrega se realiza en el campus virtual, compartiendo el link a la carpeta de Google Drive, dentro de la clase 16 en el apartado de Entrega de Proyecto Final. A fines de agilizar la corrección de trabajos, el instructor o tutor podrían solicitar una modalidad accesoria. Se trabajará sobre el mismo archivo de la etapa de preentrega, respetando las mismas pautas.
+
+Evaluación: Los criterios de evaluación están especificados en la siguiente: Rúbrica de Evaluación - Preentrega Data Analytics
